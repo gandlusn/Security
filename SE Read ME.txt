@@ -1,0 +1,96 @@
+Objective:
+
+This project mainly rests on the idea of encryption and decryption of particular documents you uploaded in to your own server which is used as a storage space, and shows a template 
+how the whole process works. it starts with finding the inveted index for all the files and then we are assuming the scenario where we are sending the encrypted files and encrypted inverted 
+index to server. That server stores these inverted index and files. Now assume a situation, if we send the some query terms to find all the documents that contain this term, 
+then this particular term is encrypted and sent over to the server. If a person hacks in to the server and tries to retrieve the documents, then all he will get are some encrypted files, 
+and if he tries to hack our search words and retrieve some kind of insight from those he fails there also because they are also encrpyted. if authenticated user tries to get that documents 
+then he will get the encrypted files,But as he is provided with the key that is stored in this personal computer, he will be the only person to be able to read it.
+
+
+Main Functionalities:
+
+1) AESCipher: This particular class is used to encrypt the strings using AES ECB and CBC modes.
+
+2) invertedIndex: This function is mainly used to create the inverted index. From the words in all the files.
+
+3) enc_index: this function is used to encrypt the keys of the Inverted index.
+
+4) exchangeKeys: this function is is used to exchange the encrypted keys with the keys of the inverted index.
+
+5) decryptionKeys: This is mainly used to decrypt the inverted retreived from the file "Enc_InvertedIndex.txt"
+
+6) files_encryption:this function is mainly used to encrypt all the files and upload all of them in to a file 
+
+7) file_decryption_from_file: This is mainly used to decrypt a single file at a time
+
+8) searchFile: This is the mainly is used to serach a word in the encrypted inverted index and retrive the indexes associated with that these indexes then are used to retreive encrypted files and derypt them.
+
+Working:
+
+1. first it will take input of the word files
+
+2. Generates Inverted index of those files
+
+3. Then Inverted Index is encrypted using a KEY 
+
+4. Inverted Index will copied to a file
+
+5. After this Files are encrypted using KEY
+
+6. These encrypted files are written in to a file
+
+7. Then a set of words are taken as input
+
+8. These words are encrypted using the KEY 
+
+9. The Encrypted search words are searched in Encrypted inverted index
+
+10. This search will give us the set of files these words are present in.
+
+11. Finally, those encrypted files are retrieved and decrypted.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
